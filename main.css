@@ -1,0 +1,15 @@
+:root{
+    --color-primary: #FDCFF3;
+    --color-secundary: #DE89BE;
+    --background-primary: #40434E;
+}
+
+body{
+    background: var(--background-primary);
+}
+
+h1, p{
+    color: var(--color-secundary);
+    text-shadow: black 8px 2px 8px;
+    font-weight: bold;
+}
