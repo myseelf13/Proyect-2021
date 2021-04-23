@@ -1,26 +1,26 @@
-:root{
+:root {
 
-    /*Basic Colors*/
+    /* Basic Colors */
     --basic-black: #000;
     --basic-white: #fff;
 
-    /*Main Colors*/
-    --background-primary: #FEE5BD;
-    --background-secundary: #F2B79F;
-    --background-tercery: #E0CFF1;
-    --background-footer: #C0D7DD;
+    /* Colors */
+    --background-primary: #ffcd7c;
+    --background-secundary: #f18053;
+    --background-tercery: #f1bc89;
+    --background-footer: #9bd3e0;
 
 
     /* font-sizes */
     --font-size-base: 10px;
-    --font-size-xs: 1.2rem;
+    --font-size-xs: 1.5rem;
     --font-size-sm: 1.8rem;
-    --font-size-md: 2.2rem;
-    --font-size-lg: 3.5rem;
-    --font-size-xl: 4.5rem;
+    --font-size-md: 2.9rem;
+    --font-size-lg: 5.5rem;
+    --font-size-xl: 6.2rem;
 }
 
-/** reset **/
+/* reset */
 html,
 body,
 p,
@@ -55,9 +55,8 @@ h4,
 h5,
 h6 {
   font-size: 100%;
-  font-weight: normal;
-  font-family: "Rubik", sans-serif;
   line-height: 1.125;
+  font-family: 'Overpass', sans-serif;
 }
 
 ul {
@@ -89,45 +88,107 @@ video {
   max-width: 100%;
 }
 
-/* html elements */
-body{
-    margin: 0;
+body {
+  font-family: 'Chivo', sans-serif;
 }
 
+a {
+  color: var(--basic-white);
+  text-decoration: none;
+}
+
+
 /* components  */
-.container{
+
+.seccion {
+    overflow: hidden;
+}
+
+.contenedor {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    width: auto;
-    height: calc(100vh - 5px);
+    height: calc(100vh - 20px);
     background-color: var(--background-primary);
+    justify-content: center;
     color: var(--basic-black);
-}
+  }
 
-.content{
+.contenido {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.titulo{
+.titulo {
     font-size: var(--font-size-xl);
     margin-bottom: 20px;
-    text-align: left;
 }
   
 .subtitulo {
     font-size: var(--font-size-md);
 }
 
-.pie{
+.presentacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  background-color: var(--background-secundary);
+  font-size: var(--font-size-xs);
+}
+
+.presentacion p, h2 {
+  padding: 20px;
+  font-weight: bold;
+}
+
+.presentacion h2 {
+  font-size: var(--font-size-lg);
+}
+
+.presentacion p {
+  font-size: var(--font-size-sm);
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: var(--background-tercery);
+    font-size: var(--font-size-lg);
+}
+
+.formulario {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--background-secundary);
+  width: 80vh;
+  height: 50vh;
+}
+.formulario p {
+  font-size: var(--font-size-sm);
+}
+
+
+.pie {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
-    background-color: var(--background-tercery);
-    color: var(--basic-black);
-    font-size: var(--font-size-sm);
+    background-color: var(--background-primary);
+    color: var(--basic-white);
+    font-size: var(--font-size-xs);
+    text-shadow: black 1px 2px 4px;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --font-size-base: 12px;
+  }
 }
